@@ -11,12 +11,12 @@ import UIKit
 class TodoListViewController: UITableViewController {
     
     let itemArray = ["Follow the white rabbit", "Bend spoon with mind","take the red pill"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
     }
@@ -31,7 +31,7 @@ class TodoListViewController: UITableViewController {
     
     //delegate methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // print (itemArray[indexPath.row])
+        // print (itemArray[indexPath.row])
         
         //tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         
@@ -43,5 +43,9 @@ class TodoListViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
+//MARK - Add New Items section
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    }
+    
 }
 
